@@ -1,0 +1,22 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "framework baase",
+  "main": "index2.php",
+  "license": "MIT",
+  "homepage": "http://foundation.zurb.com",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "highlight-js": "~8.8.0",
+    "jquery-ui": "^1.11.4",
+    "jquery-file-download": "^1.4.4"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

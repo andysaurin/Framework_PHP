@@ -1,0 +1,11 @@
+Dear ##NAME##,
+
+You have successfully reset your password.
+
+You may now login with the new password using the link/URL below:
+
+##URI##/login?username=##EMAIL##
+
+
+Please do not reply to this email message, as your message will bounce.
+

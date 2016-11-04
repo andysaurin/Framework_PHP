@@ -1,0 +1,14 @@
+Dear ##NAME##,
+
+We have received a request to reset your password.
+
+To reset your password, please use the link/URL below:
+
+##URI##/home/iforgot/reset/?who=##TMP_PASS##
+
+This link is valid for only 1 hour.
+If you did not initiate this request, there is no action required on your part. Simply ignore this email.
+
+
+Please do not reply to this email message, as your message will bounce.
+

@@ -1,0 +1,14 @@
+Dear ##NAME##,
+
+In order to fully use your account, we require that you confirm this email address.
+To activate your account, please follow the link below.
+
+##URI##/home/create/activate/?who=##KEY##
+
+Give it a click, and you're all done!
+
+If you don't activate your account within 7 days, it will be deleted.
+
+
+Please do not reply to this email message, as your message will bounce.
+

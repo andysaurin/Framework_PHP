@@ -1,0 +1,37 @@
+# BEGIN Cache-Control Headers
+<IfModule mod_headers.c>
+	<FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
+		Header set Cache-Control "max-age=2592000, public"
+	</FilesMatch>
+	<FilesMatch "\.(js)$">
+		Header set Cache-Control "max-age=2592000, private"
+	</FilesMatch>
+	<filesMatch "\.(html|htm)$">
+		Header set Cache-Control "max-age=7200, public"
+	</filesMatch>
+	# Disable caching for scripts and other dynamic files
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+</IfModule>
+# END Cache-Control Headers
+
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^$  /index.php?module=home [L]
+
+
+#login control
+RewriteRule ^login\/?(.*)$ /index.php?module=home&class=login [L,QSA]
+RewriteRule ^logout\/?(.*)$ /index.php?module=home&class=logout [L,QSA]
+RewriteRule ^create\/?(.*)$ /index.php?module=home&class=create [L,QSA]
+
+#fURLs
+RewriteRule ^([a-zA-Z]+)\/?$ /index.php?module=$1 [L,QSA]
+RewriteRule ^([a-zA-Z]+)\/([a-z_A-Z]+)\/?$ /index.php?module=$1&class=$2 [L,QSA]
+RewriteRule ^([a-zA-Z]+)\/([a-z_A-Z]+)\/([a-z_A-Z]+)\/?$ /index.php?module=$1&class=$2&event=$3 [L,QSA]
+
+
