@@ -9,8 +9,7 @@ USE `Framework_PHP`;
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL,
-  `client_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `level` int(11) NOT NULL DEFAULT '1',
   `is_admin` tinyint(4) NOT NULL DEFAULT '0',
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -19,11 +18,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `tmp_password` varchar(32) DEFAULT NULL,
   `tmp_password_expires` int(11) DEFAULT NULL,
   `email` varchar(255) NOT NULL DEFAULT '',
-  `dateRegistered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastSeen` datetime DEFAULT NULL,
-  `dateUpdated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastLogin` timestamp NULL DEFAULT NULL,
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `status` varchar(10) NOT NULL DEFAULT 'Active',
+  `locked` tinyint(4) NOT NULL DEFAULT '1'
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
